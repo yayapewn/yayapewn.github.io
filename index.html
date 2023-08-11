@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -23,32 +23,45 @@
             <a-asset-item id="animated-a3" src="./assets/a3.glb"></a-asset-item>
         </a-assets>
 
-       <a-marker
-    id="marker-a1"
-    type="pattern"
-    preset="custom"
-    url="./assets/pattern-a1.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;"
->
-    <a-entity
-        scale="7.140485665603184 7.140485665603184 7.140485665603184"
-        animation-mixer="loop: repeat"
-        gltf-model="#animated-a1"
-        class="clickable"
-        gesture-handler
-    ></a-entity>
+        <a-marker
+            id="marker-a1"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a1.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a1"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
 
-    <!-- Add image element -->
-    <a-image
-        src="./assets/a1.jpg"
-   
-        position="0 0.5 -1" <!-- Adjust position as needed -->
-    ></a-image>
+            <!-- Add image element -->
+            <a-image
+                src="./assets/a1.jpg"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-image>
 
-  
-</a-marker>
+            <!-- Add text element -->
+            <a-text
+                value="请点我"
+                position="1.2 0.5 -1" <!-- Adjust position as needed -->
+                align="center"
+                baseline="top"
+                color="black"
+            ></a-text>
+			
+			<!-- Add link on image -->
+            <a-link
+                href="https://www.paiho.com/tw/"
+                title="Visit Paiho"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-link>
+        </a-marker>
 
         <a-marker
             id="marker-a2"
@@ -66,13 +79,28 @@
                 class="clickable"
                 gesture-handler
             ></a-entity>
+
+            <!-- Add image element -->
+            <a-image
+                src="./assets/a2.jpg"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-image>
+
+            <!-- Add text element -->
+            <a-text
+                value="请点我"
+                position="1.2 0.5 -1" <!-- Adjust position as needed -->
+                align="center"
+                baseline="top"
+                color="black"
+            ></a-text>
 			
-			  <!-- Add image element -->
-    <a-image
-        src="./assets/a2.jpg"
-   
-        position="0 0.5 -1" <!-- Adjust position as needed -->
-    ></a-image>
+			<!-- Add link on image -->
+            <a-link
+                href="https://www.paiho.com/tw/"
+                title="Visit Paiho"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-link>
         </a-marker>
 
         <a-marker
@@ -91,14 +119,28 @@
                 class="clickable"
                 gesture-handler
             ></a-entity>
+
+            <!-- Add image element -->
+            <a-image
+                src="./assets/a3.jpg"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-image>
+
+            <!-- Add text element -->
+            <a-text
+                value="请点我"
+                position="1.2 0.5 -1" <!-- Adjust position as needed -->
+                align="center"
+                baseline="top"
+                color="black"
+            ></a-text>
 			
-			  <!-- Add image element -->
-    <a-image
-        src="./assets/a3.jpg"
-   
-        position="0 0.5 -1" <!-- Adjust position as needed -->
-    ></a-image>
-	
+			<!-- Add link on image -->
+            <a-link
+                href="https://www.paiho.com/tw/"
+                title="Visit Paiho"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-link>
         </a-marker>
 
         <a-entity camera></a-entity>
