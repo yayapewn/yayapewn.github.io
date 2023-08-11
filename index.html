@@ -23,37 +23,42 @@
             <a-asset-item id="animated-a3" src="./assets/a3.glb"></a-asset-item>
         </a-assets>
 
-       <a-marker
-    id="marker-a1"
-    type="pattern"
-    preset="custom"
-    url="./assets/pattern-a1.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;"
->
-    <a-entity
-        scale="7.140485665603184 7.140485665603184 7.140485665603184"
-        animation-mixer="loop: repeat"
-        gltf-model="#animated-a1"
-        class="clickable"
-        gesture-handler
-    ></a-entity>
+        <a-marker
+            id="marker-a1"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a1.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a1"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
 
-    <!-- Add image element -->
-    <a-image
-        src="./assets/a1.jpg"
-   
-        position="0 0.5 -1" <!-- Adjust position as needed -->
-    ></a-image>
+            <!-- Add image element -->
+            <a-image
+                src="./assets/a1.jpg"
+                position="0 0.5 -1" <!-- Adjust position as needed -->
+            ></a-image>
 
-    <!-- Add text element -->
-       <a-text
-    value="&#20013;&#25991;傳統魔鬼沾、魔鬼氈、黏扣帶、粘扣帶（Hook and loop fastener、touch fastener）鉤面由尼龍紗編織成圈狀後，將圈狀頂端處切斷，形成細鉤造型。百和專利之射出勾系列產品，經過多年研發以塑膠射出成型，直接製作出鉤型結構，可增加粘扣強度。現已廣泛被市場所應用並成為各產業之主流用品，並開發多樣鈎型與止滑布等，適用於各式產品如鞋類、成衣、文具、醫療用品、運動用品、傢俱等；亦有車輛用，航空用，嬰幼兒等專業射出勾產品。"
-    position="0 -4 -1"
-    wrap-count="15" <!-- Adjust this value based on your image width -->
-></a-text>
-</a-marker>
+            <!-- Add text element -->
+            <a-text
+                value="傳統魔鬼沾、魔鬼氈、黏扣帶、粘扣帶（Hook and loop fastener、touch fastener）鉤面由尼龍紗編織成圈狀後，將圈狀頂端處切斷，形成細鉤造型。百和專利之射出勾系列產品，經過多年研發以塑膠射出成型，直接製作出鉤型結構，可增加粘扣強度。現已廣泛被市場所應用並成為各產業之主流用品，並開發多樣鈎型與止滑布等，適用於各式產品如鞋類、成衣、文具、醫療用品、運動用品、傢俱等；亦有車輛用，航空用，嬰幼兒等專業射出勾產品。"
+                position="0 -4 -1"
+                width="12" <!-- Adjust the width to match your image size -->
+                wrap-count="15" <!-- Adjust this value based on your image width -->
+                font="https://cdn.aframe.io/fonts/Exo2SemiBold.fnt" <!-- Use a font that supports Chinese characters -->
+                font-image="https://cdn.aframe.io/fonts/Exo2SemiBold.png"
+                align="left"
+                baseline="top"
+                color="yellow" <!-- Set text color -->
+            ></a-text>
+        </a-marker>
 
         <a-marker
             id="marker-a2"
