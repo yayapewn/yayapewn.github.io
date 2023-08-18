@@ -43,41 +43,7 @@
                 ></a-entity>
             </a-marker>
 
-            <a-marker
-                id="marker-a2"
-                type="pattern"
-                preset="custom"
-                url="./assets/pattern-a2.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    scale="7.140485665603184 7.140485665603184 7.140485665603184"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-a2"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
-
-            <a-marker
-                id="marker-a3"
-                type="pattern"
-                preset="custom"
-                url="./assets/pattern-a3.patt"
-                raycaster="objects: .clickable"
-                emitevents="true"
-                cursor="fuse: false; rayOrigin: mouse;"
-            >
-                <a-entity
-                    scale="7.140485665603184 7.140485665603184 7.140485665603184"
-                    animation-mixer="loop: repeat"
-                    gltf-model="#animated-a3"
-                    class="clickable"
-                    gesture-handler
-                ></a-entity>
-            </a-marker>
+            <!-- Add other markers here -->
 
             <a-entity camera></a-entity>
         </a-scene>
@@ -86,11 +52,10 @@
     <!-- Right column for text description -->
     <div style="flex: 1; background-color: #f0f0f0; padding: 20px;">
         <h2 style="font-size: 24px; color: #333;">3D Model Description</h2>
-        <p style="font-size: 18px; color: #666;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero quis lectus consectetur, in cursus purus tristique. 
-            Nulla facilisi. Vivamus congue vel ex a facilisis. Aenean lacinia, nisi in hendrerit dignissim, libero tortor elementum ligula, 
-            sit amet congue urna tortor sit amet lectus.
-        </p>
+        <a-entity
+            scale="2 2 2"  <!-- Adjust scale as needed -->
+            text="value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero quis lectus consectetur, in cursus purus tristique. Nulla facilisi. Vivamus congue vel ex a facilisis. Aenean lacinia, nisi in hendrerit dignissim, libero tortor elementum ligula, sit amet congue urna tortor sit amet lectus.; color: #666; wrapCount: 30; align: center;"
+        ></a-entity>
     </div>
 </body>
 </html>
