@@ -7,76 +7,90 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-detector.js"></script>
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
 </head>
-<body style="margin: 0; overflow: hidden;">
-    <a-scene
-        vr-mode-ui="enabled: false;"
-        loading-screen="enabled: false;"
-        renderer="logarithmicDepthBuffer: true;"
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-        embedded
-        gesture-detector
-    >
-        <a-assets>
-            <a-asset-item id="animated-a1" src="./assets/a1.glb"></a-asset-item>
-            <a-asset-item id="animated-a2" src="./assets/a2.glb"></a-asset-item>
-            <a-asset-item id="animated-a3" src="./assets/a3.glb"></a-asset-item>
-        </a-assets>
-
-        <a-marker
-            id="marker-a1"
-            type="pattern"
-            preset="custom"
-            url="./assets/pattern-a1.patt"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
+<body style="margin: 0; overflow: hidden; display: flex; height: 100vh;">
+    <!-- Left column for 3D object -->
+    <div style="flex: 1;">
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            loading-screen="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+            embedded
+            gesture-detector
+            style="height: 100%;"
         >
-            <a-entity
-                scale="7.140485665603184 7.140485665603184 7.140485665603184"
-                animation-mixer="loop: repeat"
-                gltf-model="#animated-a1"
-                class="clickable"
-                gesture-handler
-            ></a-entity>
-        </a-marker>
+            <a-assets>
+                <a-asset-item id="animated-a1" src="./assets/a1.glb"></a-asset-item>
+                <a-asset-item id="animated-a2" src="./assets/a2.glb"></a-asset-item>
+                <a-asset-item id="animated-a3" src="./assets/a3.glb"></a-asset-item>
+            </a-assets>
 
-        <a-marker
-            id="marker-a2"
-            type="pattern"
-            preset="custom"
-            url="./assets/pattern-a2.patt"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
-        >
-            <a-entity
-                scale="7.140485665603184 7.140485665603184 7.140485665603184"
-                animation-mixer="loop: repeat"
-                gltf-model="#animated-a2"
-                class="clickable"
-                gesture-handler
-            ></a-entity>
-        </a-marker>
+            <a-marker
+                id="marker-a1"
+                type="pattern"
+                preset="custom"
+                url="./assets/pattern-a1.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-a1"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
 
-        <a-marker
-            id="marker-a3"
-            type="pattern"
-            preset="custom"
-            url="./assets/pattern-a3.patt"
-            raycaster="objects: .clickable"
-            emitevents="true"
-            cursor="fuse: false; rayOrigin: mouse;"
-        >
-            <a-entity
-                scale="7.140485665603184 7.140485665603184 7.140485665603184"
-                animation-mixer="loop: repeat"
-                gltf-model="#animated-a3"
-                class="clickable"
-                gesture-handler
-            ></a-entity>
-        </a-marker>
+            <a-marker
+                id="marker-a2"
+                type="pattern"
+                preset="custom"
+                url="./assets/pattern-a2.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-a2"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
 
-        <a-entity camera></a-entity>
-    </a-scene>
+            <a-marker
+                id="marker-a3"
+                type="pattern"
+                preset="custom"
+                url="./assets/pattern-a3.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+            >
+                <a-entity
+                    scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                    animation-mixer="loop: repeat"
+                    gltf-model="#animated-a3"
+                    class="clickable"
+                    gesture-handler
+                ></a-entity>
+            </a-marker>
+
+            <a-entity camera></a-entity>
+        </a-scene>
+    </div>
+
+    <!-- Right column for text description -->
+    <div style="flex: 1; background-color: #f0f0f0; padding: 20px;">
+        <h2 style="font-size: 24px; color: #333;">3D Model Description</h2>
+        <p style="font-size: 18px; color: #666;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero quis lectus consectetur, in cursus purus tristique. 
+            Nulla facilisi. Vivamus congue vel ex a facilisis. Aenean lacinia, nisi in hendrerit dignissim, libero tortor elementum ligula, 
+            sit amet congue urna tortor sit amet lectus.
+        </p>
+    </div>
 </body>
 </html>
