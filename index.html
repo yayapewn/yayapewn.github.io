@@ -38,21 +38,55 @@
                 class="clickable"
                 gesture-handler
             ></a-entity>
-
-            <!-- Add image element -->
-            <a-image
-                src="./assets/a1.jpg"
-                position="0 0.5 -1"
-            ></a-image>
-
-            <!-- Add text element -->
-            <a-entity
-                position="1 1 -2"  <!-- Adjust position as needed -->
-                text="value: Title\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero quis lectus consectetur, in cursus purus tristique. Nulla facilisi. Vivamus congue vel ex a facilisis. Aenean lacinia, nisi in hendrerit dignissim, libero tortor elementum ligula, sit amet congue urna tortor sit amet lectus.; color: black; wrapCount: 40; align: left; width: 2.5;"
-            ></a-entity>
+			<a-text
+value="Hello World?"
+position="0 0.5 -0.5"
+></a-text>
         </a-marker>
 
-        <!-- Add other markers here -->
+        <a-marker
+            id="marker-a2"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a2.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a2"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+			<a-text
+value="Hello World?"
+position="0 0.5 -0.5"
+></a-text>
+        </a-marker>
+
+        <a-marker
+            id="marker-a3"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a3.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a3"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+			<a-text
+value="Hello World?"
+position="0 0.5 -0.5"
+></a-text>
+        </a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
