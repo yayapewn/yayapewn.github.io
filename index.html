@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -23,21 +22,61 @@
             <a-asset-item id="animated-a3" src="./assets/a3.glb"></a-asset-item>
         </a-assets>
 
-        <!-- ... Your marker entities here ... -->
+        <a-marker
+            id="marker-a1"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a1.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a1"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
+
+        <a-marker
+            id="marker-a2"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a2.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a2"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
+
+        <a-marker
+            id="marker-a3"
+            type="pattern"
+            preset="custom"
+            url="./assets/pattern-a3.patt"
+            raycaster="objects: .clickable"
+            emitevents="true"
+            cursor="fuse: false; rayOrigin: mouse;"
+        >
+            <a-entity
+                scale="7.140485665603184 7.140485665603184 7.140485665603184"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-a3"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
 
         <a-entity camera></a-entity>
     </a-scene>
-
-    <!-- Text description on the right side -->
-    <div style="position: fixed; top: 10px; right: 10px; width: 300px; z-index: 1;">
-        <!-- Title -->
-        <h2 style="font-size: 24px; color: #333;">3D Model Description</h2>
-        <!-- Description -->
-        <p style="font-size: 18px; color: #666;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero quis lectus consectetur, in cursus purus tristique. 
-            Nulla facilisi. Vivamus congue vel ex a facilisis. Aenean lacinia, nisi in hendrerit dignissim, libero tortor elementum ligula, 
-            sit amet congue urna tortor sit amet lectus.
-        </p>
-    </div>
 </body>
 </html>
